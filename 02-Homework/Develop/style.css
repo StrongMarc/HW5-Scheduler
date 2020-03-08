@@ -26,33 +26,32 @@ textarea{
 
 .description{
   white-space: pre-wrap;
+  background-color: lightgrey;
 }
 
 .time-block{
   text-align: center;
   border-radius: 15px;
+  
 }
 
 .row {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
-  border-bottom: dotted;
-  /* border-color: red; */
 }  
 
 .box{
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
-  border-right: 1px solid blue; 
-  /* border-color: red;
 }  
 
 .hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  border-right: 1px solid #000000;
 }
 
 .past {
@@ -78,7 +77,14 @@ textarea{
   color: white;
 }
 
-.saveBtn i:hover {
+.fa-save {
+  background-color: #06AED5;
+  color: white;
+}
+
+.saveBtn button:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+  background-color: #06AED5;
+  color: black
 }
