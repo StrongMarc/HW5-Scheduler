@@ -43,10 +43,10 @@ textarea{
 
 .box{
   white-space: pre-wrap;
-  /* height: 80px; */
+  height: 80px;
   border-top: 1px solid white;
-  border-right: 1px solid blue;
-  /* border-color: red; */
+  border-right: 1px solid blue; 
+  /* border-color: red;
 }  
 
 .hour {
