@@ -73,15 +73,101 @@ $(document).ready(function() {
     // $("#currentDay").text(event9AM.format('LT'))
     console.log(now.diff(time11AM, 'hours', 'minutes'))
     if (now.diff(time11AM, 'hours', 'minutes') > 1 ){
-      $("#10AMevent").addClass("past");
+      $("#11AMevent").addClass("past");
     }
     else if (now.diff(time11AM, 'hours', 'minutes') > 0 && now.diff(time11AM, 'hours', 'minutes') < 1 ){
-      $("#10AMevent").addClass("present");
+      $("#11AMevent").addClass("present");
     }
     else if (now.diff(time11AM, 'hours', 'minutes') < 0 ){
-      $("#10AMevent").addClass("future");
+      $("#11AMevent").addClass("future");
     }
 
+    
+    //color 12pm timeblock
+    var time12PM = moment({hour: firstHour+3});
+    // $("#currentDay").text(event9AM.format('LT'))
+    console.log(now.diff(time12PM, 'hours', 'minutes'))
+    if (now.diff(time12PM, 'hours', 'minutes') > 1 ){
+      $("#12PMevent").addClass("past");
+    }
+    else if (now.diff(time12PM, 'hours', 'minutes') > 0 && now.diff(time12PM, 'hours', 'minutes') < 1 ){
+      $("#12PMevent").addClass("present");
+    }
+    else if (now.diff(time12PM, 'hours', 'minutes') < 0 ){
+      $("#12PMevent").addClass("future");
+    }
+
+    //color 1pm timeblock
+    var time1PM = moment({hour: firstHour+4});
+    // $("#currentDay").text(event9AM.format('LT'))
+    console.log(now.diff(time1PM, 'hours', 'minutes'))
+    if (now.diff(time1PM, 'hours', 'minutes') > 1 ){
+      $("#1PMevent").addClass("past");
+    }
+    else if (now.diff(time1PM, 'hours', 'minutes') > 0 && now.diff(time1PM, 'hours', 'minutes') < 1 ){
+      $("#1PMevent").addClass("present");
+    }
+    else if (now.diff(time1PM, 'hours', 'minutes') < 0 ){
+      $("#1PMevent").addClass("future");
+    }
+
+    //color 2pm timeblock
+    var time2PM = moment({hour: firstHour+5});
+    // $("#currentDay").text(event9AM.format('LT'))
+    console.log(now.diff(time2PM, 'hours', 'minutes'))
+    if (now.diff(time2PM, 'hours', 'minutes') > 1 ){
+      $("#2PMevent").addClass("past");
+    }
+    else if (now.diff(time2PM, 'hours', 'minutes') > 0 && now.diff(time2PM, 'hours', 'minutes') < 1 ){
+      $("#2PMevent").addClass("present");
+    }
+    else if (now.diff(time2PM, 'hours', 'minutes') < 0 ){
+      $("#2PMevent").addClass("future");
+    }
+
+    //color 3pm timeblock
+    var time3PM = moment({hour: firstHour+6});
+    // $("#currentDay").text(event9AM.format('LT'))
+    console.log(now.diff(time3PM, 'hours', 'minutes'))
+    if (now.diff(time3PM, 'hours', 'minutes') > 1 ){
+      $("#3PMevent").addClass("past");
+    }
+    else if (now.diff(time3PM, 'hours', 'minutes') > 0 && now.diff(time3PM, 'hours', 'minutes') < 1 ){
+      $("#3PMevent").addClass("present");
+    }
+    else if (now.diff(time3PM, 'hours', 'minutes') < 0 ){
+      $("#3PMevent").addClass("future");
+    }
+
+    //color 4pm timeblock
+    var time4PM = moment({hour: firstHour+7});
+    // $("#currentDay").text(event9AM.format('LT'))
+    console.log(now.diff(time4PM, 'hours', 'minutes'))
+    if (now.diff(time4PM, 'hours', 'minutes') > 1 ){
+      $("#4PMevent").addClass("past");
+    }
+    else if (now.diff(time4PM, 'hours', 'minutes') > 0 && now.diff(time4PM, 'hours', 'minutes') < 1 ){
+      $("#4PMevent").addClass("present");
+    }
+    else if (now.diff(time4PM, 'hours', 'minutes') < 0 ){
+      $("#4PMevent").addClass("future");
+    }
+
+    //color 5pm timeblock
+    var time5PM = moment({hour: firstHour+8});
+    // $("#currentDay").text(event9AM.format('LT'))
+    console.log(now.diff(time5PM, 'hours', 'minutes'))
+    if (now.diff(time5PM, 'hours', 'minutes') > 1 ){
+      $("#5PMevent").addClass("past");
+    }
+    else if (now.diff(time5PM, 'hours', 'minutes') > 0 && now.diff(time5PM, 'hours', 'minutes') < 1 ){
+      $("#5PMevent").addClass("present");
+    }
+    else if (now.diff(time5PM, 'hours', 'minutes') < 0 ){
+      $("#5PMevent").addClass("future");
+    }
+
+    
     // $("#btn9AM").on("click", function(e){
     var eventBlock = {
           block:  [{
