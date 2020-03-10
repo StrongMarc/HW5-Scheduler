@@ -11,21 +11,36 @@ $(document).ready(function() {
     eventBlock = JSON.parse(get)
     console.log(eventBlock.block)
     console.log(eventBlock.block[0].activity)
+
+    // writeText (eventBlock.block[0].activity)
+    // writeText (eventBlock.block[1].activity)
+    // writeText (eventBlock.block[2].activity)
     if (eventBlock.block[0].hour == 9) {
       writeText (eventBlock.block[0].activity)
+      console.log(eventBlock.block)
     }
-    else if (eventBlock.block[1].hour == 10) {
-      writeText (eventBlock.block[1].activity)
+    if (eventBlock.block[1].hour == 10) {
+      writeText1 (eventBlock.block[1].activity)
+      console.log(eventBlock.block)
     }
-  
+    if (eventBlock.block[2].hour == 11) {
+      writeText2 (eventBlock.block[2].activity)
+    }
   }
 
   //https://stackoverflow.com/questions/26346956/inserting-text-into-textarea-with-javascript-for-google-chrome-extension
   //function to write to text area
   function writeText (text){
-  document.getElementById('activity').innerHTML = text
+      document.getElementById('activity').innerHTML = text
   }
 
+  function writeText1 (text){
+      document.getElementById('activity1').innerHTML = text
+  }
+  function writeText2 (text){
+    document.getElementById('activity2').innerHTML = text
+  }
+  
   // figure how moment.js works, define current time
     var now = moment();
     console.log(now)
@@ -55,6 +70,7 @@ $(document).ready(function() {
     }
   
     //color 10am timeblock
+    render(firstHour+1)
     var time10AM = moment({hour: firstHour+1});
     // $("#currentDay").text(event9AM.format('LT'))
     console.log(now.diff(time10AM, 'hours', 'minutes'))
@@ -86,7 +102,6 @@ $(document).ready(function() {
     //color 12pm timeblock
     var time12PM = moment({hour: firstHour+3});
     // $("#currentDay").text(event9AM.format('LT'))
-    console.log(now.diff(time12PM, 'hours', 'minutes'))
     if (now.diff(time12PM, 'hours', 'minutes') > 1 ){
       $("#12PMevent").addClass("past");
     }
@@ -100,7 +115,6 @@ $(document).ready(function() {
     //color 1pm timeblock
     var time1PM = moment({hour: firstHour+4});
     // $("#currentDay").text(event9AM.format('LT'))
-    console.log(now.diff(time1PM, 'hours', 'minutes'))
     if (now.diff(time1PM, 'hours', 'minutes') > 1 ){
       $("#1PMevent").addClass("past");
     }
@@ -114,7 +128,6 @@ $(document).ready(function() {
     //color 2pm timeblock
     var time2PM = moment({hour: firstHour+5});
     // $("#currentDay").text(event9AM.format('LT'))
-    console.log(now.diff(time2PM, 'hours', 'minutes'))
     if (now.diff(time2PM, 'hours', 'minutes') > 1 ){
       $("#2PMevent").addClass("past");
     }
@@ -127,8 +140,7 @@ $(document).ready(function() {
 
     //color 3pm timeblock
     var time3PM = moment({hour: firstHour+6});
-    // $("#currentDay").text(event9AM.format('LT'))
-    console.log(now.diff(time3PM, 'hours', 'minutes'))
+    // $("#currentDay").text(event9AM.format('LT')
     if (now.diff(time3PM, 'hours', 'minutes') > 1 ){
       $("#3PMevent").addClass("past");
     }
@@ -142,7 +154,6 @@ $(document).ready(function() {
     //color 4pm timeblock
     var time4PM = moment({hour: firstHour+7});
     // $("#currentDay").text(event9AM.format('LT'))
-    console.log(now.diff(time4PM, 'hours', 'minutes'))
     if (now.diff(time4PM, 'hours', 'minutes') > 1 ){
       $("#4PMevent").addClass("past");
     }
@@ -169,61 +180,72 @@ $(document).ready(function() {
 
     
     // $("#btn9AM").on("click", function(e){
-    var eventBlock = {
-          block:  [{
-            hour: "9",
-            activity: "",
-          }, {
-            hour: "10",
-            activity: "",
-          }, {
-            hour: "11",
-            activity: "",
-          }, {
-            hour: "12",
-            activity: "",
-          }, {
-            hour: "13",
-            activity: "",
-          }, {
-            hour: "14",
-            activity: "",
-          }, {
-            hour: "15",
-            activity: "",
-          }, {
-            hour: "16",
-            activity: "",
-          }, {
-            hour: "17",
-            activity: "",
-          }]
-        }         
-   
+  //   var eventBlock = {
+  //         block:  [{
+  //           hour: "9",
+  //           activity: "",
+  //         }, {
+  //           hour: "10",
+  //           activity: "",
+  //         }, {
+  //           hour: "11",
+  //           activity: "",
+  //         }, {
+  //           hour: "12",
+  //           activity: "",
+  //         }, {
+  //           hour: "13",
+  //           activity: "",
+  //         }, {
+  //           hour: "14",
+  //           activity: "",
+  //         }, {
+  //           hour: "15",
+  //           activity: "",
+  //         }, {
+  //           hour: "16",
+  //           activity: "",
+  //         }, {
+  //           hour: "17",
+  //           activity: "",
+  //         }]
+  //       }         
+  //  console.log(eventBlock.block[1])
 
     //Save on 9AM button
-      document.getElementsByTagName("button")[0].addEventListener("click", change);
-      function change(event){
-        // document.getElementsByTagName("button")[0].innerHTML = "YOU!"
-        // console.log(event)
-        // $(this).val()
-        // alert($(this).val())
-        // console.log($(this).val())
-        var x = document.getElementById('activity').value;
-        eventBlock.block[0].activity = x 
-        saved = JSON.stringify(eventBlock)
+      document.getElementsByTagName("button")[0].addEventListener("click", function() {
+      
+        var nine = document.getElementById('activity').value;
+        eventBlock.block[0].activity = nine 
+        var saved = JSON.stringify(eventBlock)
         alert (saved)
         localStorage.setItem('saved', saved)
-        document.getElementById('activity').innerHTML = x;
-        alert (saved)
-        // localStorage.setItem('x', x)
-        // console.log(activity)
-      }
+        document.getElementById('activity').innerHTML = nine;
+        console.log(eventBlock.block)
+      })
       
-      // x = div.textarea.val
-      // console.log(x)
-      // console.log($("p:nth-child(1)").value)
-      // localStorage.setItem('event9AM', event9AM)
-    // })
+      //Save on 10AM button
+      document.getElementsByTagName("button")[1].addEventListener("click", function (){
+        var ten = document.getElementById('activity1').value;
+        eventBlock.block[1].activity = ten
+        var saved = JSON.stringify(eventBlock)
+        alert (saved)
+        localStorage.setItem('saved', saved)
+        document.getElementById('activity1').innerHTML = ten;
+        console.log(eventBlock.block)
+      })
+
+      //Save on 11AM button
+      document.getElementsByTagName("button")[2].addEventListener("click", function (){
+        var eleven = document.getElementById('activity2').value;
+        console.log((eventBlock.block[0]))
+        console.log((eventBlock.block[2]))
+        eventBlock.block[2].activity = eleven
+        var saved = JSON.stringify(eventBlock)
+        alert (saved)
+        localStorage.setItem('saved', saved)
+        document.getElementById('activity2').innerHTML = eleven;
+        console.log(eventBlock.block)
+      })
 
   });
