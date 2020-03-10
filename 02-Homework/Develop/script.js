@@ -12,19 +12,32 @@ $(document).ready(function() {
     console.log(eventBlock.block)
     console.log(eventBlock.block[0].activity)
 
-    // writeText (eventBlock.block[0].activity)
-    // writeText (eventBlock.block[1].activity)
-    // writeText (eventBlock.block[2].activity)
     if (eventBlock.block[0].hour == 9) {
       writeText (eventBlock.block[0].activity)
-      console.log(eventBlock.block)
     }
     if (eventBlock.block[1].hour == 10) {
       writeText1 (eventBlock.block[1].activity)
-      console.log(eventBlock.block)
     }
     if (eventBlock.block[2].hour == 11) {
       writeText2 (eventBlock.block[2].activity)
+    }
+    if (eventBlock.block[3].hour == 12) {
+      writeText3 (eventBlock.block[3].activity)
+    }
+    if (eventBlock.block[4].hour == 13) {
+      writeText4 (eventBlock.block[4].activity)
+    }
+    if (eventBlock.block[5].hour == 14) {
+      writeText5 (eventBlock.block[5].activity)
+    }
+    if (eventBlock.block[6].hour == 15) {
+      writeText6 (eventBlock.block[6].activity)
+    }
+    if (eventBlock.block[7].hour == 16) {
+      writeText7 (eventBlock.block[7].activity)
+    }
+    if (eventBlock.block[8].hour == 17) {
+      writeText8 (eventBlock.block[8].activity)
     }
   }
 
@@ -40,7 +53,25 @@ $(document).ready(function() {
   function writeText2 (text){
     document.getElementById('activity2').innerHTML = text
   }
-  
+  function writeText3 (text){
+    document.getElementById('activity3').innerHTML = text
+  }
+  function writeText4 (text){
+    document.getElementById('activity4').innerHTML = text
+  }
+  function writeText5 (text){
+    document.getElementById('activity5').innerHTML = text
+  }
+  function writeText6 (text){
+    document.getElementById('activity6').innerHTML = text
+  }
+  function writeText7 (text){
+    document.getElementById('activity7').innerHTML = text
+  }
+  function writeText8 (text){
+    document.getElementById('activity8').innerHTML = text
+  }
+
   // figure how moment.js works, define current time
     var now = moment();
     console.log(now)
@@ -238,8 +269,6 @@ $(document).ready(function() {
       //Save on 11AM button
       document.getElementsByTagName("button")[2].addEventListener("click", function (){
         var eleven = document.getElementById('activity2').value;
-        console.log((eventBlock.block[0]))
-        console.log((eventBlock.block[2]))
         eventBlock.block[2].activity = eleven
         var saved = JSON.stringify(eventBlock)
         alert (saved)
@@ -248,4 +277,69 @@ $(document).ready(function() {
         console.log(eventBlock.block)
       })
 
+      //Save on 12PM button
+      document.getElementsByTagName("button")[3].addEventListener("click", function (){
+        var eleven = document.getElementById('activity3').value;
+        eventBlock.block[3].activity = eleven
+        var saved = JSON.stringify(eventBlock)
+        alert (saved)
+        localStorage.setItem('saved', saved)
+        document.getElementById('activity3').innerHTML = eleven;
+        console.log(eventBlock.block)
+      })
+
+      //Save on 1PM button
+      document.getElementsByTagName("button")[4].addEventListener("click", function (){
+        var eleven = document.getElementById('activity4').value;
+        eventBlock.block[4].activity = eleven
+        var saved = JSON.stringify(eventBlock)
+        alert (saved)
+        localStorage.setItem('saved', saved)
+        document.getElementById('activity4').innerHTML = eleven;
+        console.log(eventBlock.block)
+      })
+
+      //Save on 2PM button
+      document.getElementsByTagName("button")[5].addEventListener("click", function (){
+        var eleven = document.getElementById('activity5').value;
+        eventBlock.block[5].activity = eleven
+        var saved = JSON.stringify(eventBlock)
+        alert (saved)
+        localStorage.setItem('saved', saved)
+        document.getElementById('activity5').innerHTML = eleven;
+        console.log(eventBlock.block)
+      })
+
+      //Save on 3PM button
+      document.getElementsByTagName("button")[6].addEventListener("click", function (){
+        var eleven = document.getElementById('activity6').value;
+        eventBlock.block[6].activity = eleven
+        var saved = JSON.stringify(eventBlock)
+        alert (saved)
+        localStorage.setItem('saved', saved)
+        document.getElementById('activity6').innerHTML = eleven;
+        console.log(eventBlock.block)
+      })
+
+      //Save on 4PM button
+      document.getElementsByTagName("button")[7].addEventListener("click", function (){
+        var eleven = document.getElementById('activity7').value;
+        eventBlock.block[7].activity = eleven
+        var saved = JSON.stringify(eventBlock)
+        alert (saved)
+        localStorage.setItem('saved', saved)
+        document.getElementById('activity7').innerHTML = eleven;
+        console.log(eventBlock.block)
+      })
+
+      //Save on 5PM button
+      document.getElementsByTagName("button")[8].addEventListener("click", function (){
+        var eleven = document.getElementById('activity8').value;
+        eventBlock.block[8].activity = eleven
+        var saved = JSON.stringify(eventBlock)
+        alert (saved)
+        localStorage.setItem('saved', saved)
+        document.getElementById('activity8').innerHTML = eleven;
+        console.log(eventBlock.block)
+      })
   });
