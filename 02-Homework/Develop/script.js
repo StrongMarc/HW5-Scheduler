@@ -5,15 +5,23 @@ $(document).ready(function() {
     var today = moment().format('LL');
     $("#currentDay").text(today)
   
-  //   var event9AM = document.querySelector("#event9AM")
-  //   console.log(localStorage.getItem('event9AM'))
-  // if (!localStorage.getItem('event9AM')) {
-  //   return
-  // }
-  // else {
-  //   event9AM.textContent = localStorage.getItem('event9AM').text
-  // }
- 
+    //get locale storage
+  function render(Hour) {
+    var get = localStorage.getItem('saved')
+    eventBlock = JSON.parse(get)
+    console.log(eventBlock.block)
+    console.log(eventBlock.block[0].activity)
+    if (eventBlock.block[0].hour == 9) {
+      writeText (eventBlock.block[0].activity)
+    }
+  }
+
+  //https://stackoverflow.com/questions/26346956/inserting-text-into-textarea-with-javascript-for-google-chrome-extension
+  //function to write to text area
+  function writeText (text){
+  document.getElementById('activity').innerHTML = text
+  }
+
   // figure how moment.js works, define current time
     var now = moment();
     console.log(now)
@@ -25,6 +33,7 @@ $(document).ready(function() {
 
   //color 9am timeblock
     var firstHour = 9
+    render(firstHour)
     var time9AM = moment({hour: firstHour});
     // $("#currentDay").text(event9AM.format('LT'))
     console.log(now.diff(time9AM, 'hours', 'minutes'))
@@ -63,11 +72,10 @@ $(document).ready(function() {
             hour: "10",
             activity: "",
           },]
-        } 
-
-        
+        }         
     console.log(eventBlock.block[0].activity)
 
+    //Save on 9AM button
       document.getElementsByTagName("button")[0].addEventListener("click", change);
       function change(event){
         // document.getElementsByTagName("button")[0].innerHTML = "YOU!"
@@ -77,11 +85,11 @@ $(document).ready(function() {
         // console.log($(this).val())
         var x = document.getElementById('activity').value;
         eventBlock.block[0].activity = x 
-        myJSON = JSON.stringify(eventBlock)
-        alert (myJSON)
-        localStorage.setItem('myJSON', myJSON)
+        saved = JSON.stringify(eventBlock)
+        alert (saved)
+        localStorage.setItem('saved', saved)
         document.getElementById('activity').innerHTML = x;
-        alert (myJSON)
+        alert (saved)
         // localStorage.setItem('x', x)
         // console.log(activity)
       }
