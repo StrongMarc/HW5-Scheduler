@@ -14,6 +14,10 @@ $(document).ready(function() {
     if (eventBlock.block[0].hour == 9) {
       writeText (eventBlock.block[0].activity)
     }
+    else if (eventBlock.block[1].hour == 10) {
+      writeText (eventBlock.block[1].activity)
+    }
+  
   }
 
   //https://stackoverflow.com/questions/26346956/inserting-text-into-textarea-with-javascript-for-google-chrome-extension
@@ -31,6 +35,7 @@ $(document).ready(function() {
     console.log(now1)
   // $("#currentDay").text(now1.format('LL'))
 
+  
   //color 9am timeblock
     var firstHour = 9
     render(firstHour)
@@ -63,17 +68,52 @@ $(document).ready(function() {
       $("#10AMevent").addClass("future");
     }
 
+    //color 11am timeblock
+    var time11AM = moment({hour: firstHour+2});
+    // $("#currentDay").text(event9AM.format('LT'))
+    console.log(now.diff(time11AM, 'hours', 'minutes'))
+    if (now.diff(time11AM, 'hours', 'minutes') > 1 ){
+      $("#10AMevent").addClass("past");
+    }
+    else if (now.diff(time11AM, 'hours', 'minutes') > 0 && now.diff(time11AM, 'hours', 'minutes') < 1 ){
+      $("#10AMevent").addClass("present");
+    }
+    else if (now.diff(time11AM, 'hours', 'minutes') < 0 ){
+      $("#10AMevent").addClass("future");
+    }
+
     // $("#btn9AM").on("click", function(e){
     var eventBlock = {
           block:  [{
             hour: "9",
-            activity: "xx",
+            activity: "",
           }, {
             hour: "10",
             activity: "",
-          },]
+          }, {
+            hour: "11",
+            activity: "",
+          }, {
+            hour: "12",
+            activity: "",
+          }, {
+            hour: "13",
+            activity: "",
+          }, {
+            hour: "14",
+            activity: "",
+          }, {
+            hour: "15",
+            activity: "",
+          }, {
+            hour: "16",
+            activity: "",
+          }, {
+            hour: "17",
+            activity: "",
+          }]
         }         
-    console.log(eventBlock.block[0].activity)
+   
 
     //Save on 9AM button
       document.getElementsByTagName("button")[0].addEventListener("click", change);
