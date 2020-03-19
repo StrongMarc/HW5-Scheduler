@@ -249,7 +249,7 @@ $(document).ready(function() {
         var nine = document.getElementById('activity').value;
         eventBlock.block[0].activity = nine 
         var saved = JSON.stringify(eventBlock)
-        alert (saved)
+        // alert (saved)
         localStorage.setItem('saved', saved)
         document.getElementById('activity').innerHTML = nine;
         console.log(eventBlock.block)
@@ -260,7 +260,7 @@ $(document).ready(function() {
         var ten = document.getElementById('activity1').value;
         eventBlock.block[1].activity = ten
         var saved = JSON.stringify(eventBlock)
-        alert (saved)
+        // alert (saved)
         localStorage.setItem('saved', saved)
         document.getElementById('activity1').innerHTML = ten;
         console.log(eventBlock.block)
@@ -271,7 +271,7 @@ $(document).ready(function() {
         var eleven = document.getElementById('activity2').value;
         eventBlock.block[2].activity = eleven
         var saved = JSON.stringify(eventBlock)
-        alert (saved)
+        // alert (saved)
         localStorage.setItem('saved', saved)
         document.getElementById('activity2').innerHTML = eleven;
         console.log(eventBlock.block)
@@ -282,7 +282,7 @@ $(document).ready(function() {
         var eleven = document.getElementById('activity3').value;
         eventBlock.block[3].activity = eleven
         var saved = JSON.stringify(eventBlock)
-        alert (saved)
+        // alert (saved)
         localStorage.setItem('saved', saved)
         document.getElementById('activity3').innerHTML = eleven;
         console.log(eventBlock.block)
@@ -293,7 +293,7 @@ $(document).ready(function() {
         var eleven = document.getElementById('activity4').value;
         eventBlock.block[4].activity = eleven
         var saved = JSON.stringify(eventBlock)
-        alert (saved)
+        // alert (saved)
         localStorage.setItem('saved', saved)
         document.getElementById('activity4').innerHTML = eleven;
         console.log(eventBlock.block)
@@ -304,7 +304,7 @@ $(document).ready(function() {
         var eleven = document.getElementById('activity5').value;
         eventBlock.block[5].activity = eleven
         var saved = JSON.stringify(eventBlock)
-        alert (saved)
+        // alert (saved)
         localStorage.setItem('saved', saved)
         document.getElementById('activity5').innerHTML = eleven;
         console.log(eventBlock.block)
@@ -315,7 +315,7 @@ $(document).ready(function() {
         var eleven = document.getElementById('activity6').value;
         eventBlock.block[6].activity = eleven
         var saved = JSON.stringify(eventBlock)
-        alert (saved)
+        // alert (saved)
         localStorage.setItem('saved', saved)
         document.getElementById('activity6').innerHTML = eleven;
         console.log(eventBlock.block)
@@ -326,7 +326,7 @@ $(document).ready(function() {
         var eleven = document.getElementById('activity7').value;
         eventBlock.block[7].activity = eleven
         var saved = JSON.stringify(eventBlock)
-        alert (saved)
+        // alert (saved)
         localStorage.setItem('saved', saved)
         document.getElementById('activity7').innerHTML = eleven;
         console.log(eventBlock.block)
@@ -337,7 +337,7 @@ $(document).ready(function() {
         var eleven = document.getElementById('activity8').value;
         eventBlock.block[8].activity = eleven
         var saved = JSON.stringify(eventBlock)
-        alert (saved)
+        // alert (saved)
         localStorage.setItem('saved', saved)
         document.getElementById('activity8').innerHTML = eleven;
         console.log(eventBlock.block)
