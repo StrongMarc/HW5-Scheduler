@@ -90,7 +90,7 @@ textarea{
   color: black
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .display-3 {
     font-size: 3rem;
   }
