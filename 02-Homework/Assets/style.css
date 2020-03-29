@@ -12,7 +12,8 @@ textarea{
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
-  
+  margin-top: -25px;
+  width: 100%;
 }
 
 .jumbotron {
@@ -21,7 +22,6 @@ textarea{
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
-  
 }
 
 .description{
@@ -75,6 +75,7 @@ textarea{
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
+  text-align: center;
 }
 
 .fa-save {
@@ -87,4 +88,35 @@ textarea{
   transition: all .3s ease-in-out;
   background-color: #06AED5;
   color: black
+}
+
+@media screen and (max-width: 576px) {
+  .display-3 {
+    font-size: 3rem;
+  }
+
+  .row {
+    height: 200px;
+    white-space: normal;
+  }
+
+  .time-block{
+    padding: 10px;
+  }
+
+  .col-md-10 {
+    border-radius: 15px;
+  }
+
+  textarea {
+    margin-top: -5px;
+  }
+
+  .box{
+    white-space: normal;
+    padding: 20px;
+  }
+    .saveBtn {
+    border-radius: 15px;
+  }
 }
