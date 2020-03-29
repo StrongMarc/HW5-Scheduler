@@ -9,36 +9,37 @@ $(document).ready(function() {
   function render(Hour) {
     var get = localStorage.getItem('saved')
     eventBlock = JSON.parse(get)
-    console.log(eventBlock.block)
-    console.log(eventBlock.block[0].activity)
-
-    if (eventBlock.block[0].hour == 9) {
-      writeText (eventBlock.block[0].activity)
-    }
-    if (eventBlock.block[1].hour == 10) {
-      writeText1 (eventBlock.block[1].activity)
-    }
-    if (eventBlock.block[2].hour == 11) {
-      writeText2 (eventBlock.block[2].activity)
-    }
-    if (eventBlock.block[3].hour == 12) {
-      writeText3 (eventBlock.block[3].activity)
-    }
-    if (eventBlock.block[4].hour == 13) {
-      writeText4 (eventBlock.block[4].activity)
-    }
-    if (eventBlock.block[5].hour == 14) {
-      writeText5 (eventBlock.block[5].activity)
-    }
-    if (eventBlock.block[6].hour == 15) {
-      writeText6 (eventBlock.block[6].activity)
-    }
-    if (eventBlock.block[7].hour == 16) {
-      writeText7 (eventBlock.block[7].activity)
-    }
-    if (eventBlock.block[8].hour == 17) {
-      writeText8 (eventBlock.block[8].activity)
-    }
+    
+      console.log(eventBlock.block)
+      console.log(eventBlock.block[0].activity)
+    
+      if (eventBlock.block[0].hour == 9) {
+        writeText (eventBlock.block[0].activity)
+      }
+      if (eventBlock.block[1].hour == 10) {
+        writeText1 (eventBlock.block[1].activity)
+      }
+      if (eventBlock.block[2].hour == 11) {
+        writeText2 (eventBlock.block[2].activity)
+      }
+      if (eventBlock.block[3].hour == 12) {
+        writeText3 (eventBlock.block[3].activity)
+      }
+      if (eventBlock.block[4].hour == 13) {
+        writeText4 (eventBlock.block[4].activity)
+      }
+      if (eventBlock.block[5].hour == 14) {
+        writeText5 (eventBlock.block[5].activity)
+      }
+      if (eventBlock.block[6].hour == 15) {
+        writeText6 (eventBlock.block[6].activity)
+      }
+      if (eventBlock.block[7].hour == 16) {
+        writeText7 (eventBlock.block[7].activity)
+      }
+      if (eventBlock.block[8].hour == 17) {
+        writeText8 (eventBlock.block[8].activity)
+      }
   }
 
   //https://stackoverflow.com/questions/26346956/inserting-text-into-textarea-with-javascript-for-google-chrome-extension
@@ -211,36 +212,36 @@ $(document).ready(function() {
 
     
     // $("#btn9AM").on("click", function(e){
-  //   var eventBlock = {
-  //         block:  [{
-  //           hour: "9",
-  //           activity: "",
-  //         }, {
-  //           hour: "10",
-  //           activity: "",
-  //         }, {
-  //           hour: "11",
-  //           activity: "",
-  //         }, {
-  //           hour: "12",
-  //           activity: "",
-  //         }, {
-  //           hour: "13",
-  //           activity: "",
-  //         }, {
-  //           hour: "14",
-  //           activity: "",
-  //         }, {
-  //           hour: "15",
-  //           activity: "",
-  //         }, {
-  //           hour: "16",
-  //           activity: "",
-  //         }, {
-  //           hour: "17",
-  //           activity: "",
-  //         }]
-  //       }         
+    var eventBlock = {
+          block:  [{
+            hour: "9",
+            activity: "",
+          }, {
+            hour: "10",
+            activity: "",
+          }, {
+            hour: "11",
+            activity: "",
+          }, {
+            hour: "12",
+            activity: "",
+          }, {
+            hour: "13",
+            activity: "",
+          }, {
+            hour: "14",
+            activity: "",
+          }, {
+            hour: "15",
+            activity: "",
+          }, {
+            hour: "16",
+            activity: "",
+          }, {
+            hour: "17",
+            activity: "",
+          }]
+        }         
   //  console.log(eventBlock.block[1])
 
     //Save on 9AM button
