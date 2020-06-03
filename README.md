@@ -6,3 +6,6 @@ Created Work Day Scheduler html that does the following:
 4. Event descrtiption can be updated upon press of the correspondeing save button
 5. event desctription can be changed and saved
 6. closing html and opening maintains event data
+
+##### Webpage screenshot
+![Image of Scheduler](assets/images/Scheduler.PNG)
