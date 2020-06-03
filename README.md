@@ -8,4 +8,4 @@ Created Work Day Scheduler html that does the following:
 6. closing html and opening maintains event data
 
 ##### Webpage screenshot
-![Image of Scheduler](assets/images/Scheduler.PNG)
+![Image of Scheduler](Assets/images/Scheduler.PNG)
